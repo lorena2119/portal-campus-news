@@ -1,4 +1,5 @@
 import './components/campus-news-app.js'
+import './components/campus-category-filters.js'
 const campusArticles = [
     {
       id: 1,

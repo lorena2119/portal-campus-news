@@ -5,13 +5,22 @@ class CampusNewsApp extends HTMLElement{
         shadow.innerHTML = `
       <style>
         .logo {
-  background-color: #264653; /* Azul oscuro elegante */
+  background-color:rgb(255, 255, 255); 
   padding: 20px;
+  display: flex;
+  align-items:center;
+  justify-content: center;
   text-align: center;
-  color: #ffffff; /* Texto blanco */
-  font-family: 'Poppins', sans-serif; /* Fuente moderna */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  color:rgb(0, 1, 68);
+  gap: 1%;
+  border-bottom: 1px solid rgb(231, 246, 255);
+  font-family: 'Poppins', sans-serif; 
+
 }
+  img{
+  width:60px;
+  object-fit: cover
+  }
 
 .logo h1 {
   margin: 0;
@@ -19,12 +28,12 @@ class CampusNewsApp extends HTMLElement{
   font-weight: 700;
   letter-spacing: 1px;
 }
-      </style>
+  </style>
       <div class="logo">
-        <i class='bx bxs-rocket'></i>
+        <img src="../img/birrete.jpg">
         <h1>Campus News</h1>
-        <slot></slot>
       </div>
+      <slot></slot>
     `
     }
 }
