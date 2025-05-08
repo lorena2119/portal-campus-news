@@ -32,13 +32,19 @@ button{
   </style>
       <div class="logo">
         <button>Todas</button>
-        <button>Eventos</button>
+        <button id="events">Eventos</button>
         <button>Investigación</button>
         <button>Deportes</button>
         <button>Vida Estudiantil</button>
       </div>
       <slot></slot>
     `
+
+    let buttonevent = shadow.getElementById('events')
+    buttonevent.addEventListener('click', ()=>{
+        alert('hola')
+        buttonevent.classList.add('active')
+    })
     }
 }
 customElements.define('campus-category-filters', CampusFilters)

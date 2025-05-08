@@ -1,6 +1,7 @@
 import './components/campus-news-app.js'
 import './components/campus-category-filters.js'
-const campusArticles = [
+import './components/campus-news-list.js'
+export const campusArticles = [
     {
       id: 1,
       title: "Jornada de puertas abiertas en Ingeniería",
