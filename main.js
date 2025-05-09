@@ -1,6 +1,7 @@
 import './components/campus-news-app.js'
 import './components/campus-category-filters.js'
 import './components/campus-news-list.js'
+import './components/campus-news-detail.js'
 export const campusArticles = [
     {
       id: 1,
