@@ -10,9 +10,16 @@ class Campuslist extends HTMLElement{
         section .article{
   background-color:rgb(255, 255, 255); 
   padding: 20px;
+  width: 40%;
   border-top: 1px solid rgb(231, 246, 255);
   color:rgb(0, 1, 68);
   font-family: 'Poppins', sans-serif; 
+}
+
+section {
+
+width: 100%;
+background-color:rgb(255, 255, 255); 
 }
   h2, p{
   margin: 0;

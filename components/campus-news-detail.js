@@ -12,16 +12,18 @@ class Campusdetail extends HTMLElement {
     style.innerHTML = `
       .detail {
         position: absolute;
-        top: 50%;
-        right: 25px;
-        background-color:rgb(255, 255, 255); 
+        width: 50%;
+        height: 93.5%;
+        top: 185px;
+        right: 27px;
         padding: 20px;
-        border: 1px solid rgb(231, 246, 255);
+        border-left: 1px solid rgb(231, 246, 255);
         color:rgb(0, 1, 68);
         font-family: 'Poppins', sans-serif; 
         margin-top: 20px;
       }
       h2, p {
+      width: 40%;
         margin: 0 0 10px;
       }
     `;

@@ -41,7 +41,6 @@ button{
     `
     shadow.querySelectorAll('button').forEach(button => {
       button.addEventListener('click', (e) => {
-        button.classList.add('active')
         const category = e.target.getAttribute('data-category');
         this.dispatchEvent(new CustomEvent('categoria-seleccionada', {
           detail: { category },
