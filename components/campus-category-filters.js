@@ -31,21 +31,25 @@ button{
   }
   </style>
       <div class="logo">
-        <button>Todas</button>
-        <button id="events">Eventos</button>
-        <button>Investigación</button>
-        <button>Deportes</button>
-        <button>Vida Estudiantil</button>
+        <button data-category="all">Todas</button>
+        <button data-category="Eventos">Eventos</button>
+        <button data-category="Investigación">Investigación</button>
+        <button data-category="Deportes">Deportes</button>
+        <button data-category="Vida estudiantil">Vida Estudiantil</button>
       </div>
       <slot></slot>
     `
-
-    let buttonevent = shadow.getElementById('events')
-    buttonevent.addEventListener('click', ()=>{
-        alert('hola')
-        buttonevent.classList.add('active')
-    })
-    }
+    shadow.querySelectorAll('button').forEach(button => {
+      button.addEventListener('click', (e) => {
+        const category = e.target.getAttribute('data-category');
+        this.dispatchEvent(new CustomEvent('categoria-seleccionada', {
+          detail: { category },
+          bubbles: true,
+          composed: true
+        }));
+      });
+    });
+  }
 }
 customElements.define('campus-category-filters', CampusFilters)
 export default CampusFilters
